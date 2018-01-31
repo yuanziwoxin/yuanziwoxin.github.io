@@ -5,12 +5,61 @@
     
     <title>YuanTechnology</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
+    <meta name="description" content="##Python笔记（一） @(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示为list类型type((Fa">
+<meta property="og:type" content="article">
 <meta property="og:title" content="YuanTechnology">
-<meta property="og:url" content="http://yuan.technology/index.html">
+<meta property="og:url" content="http://yuan.technology/2018/02/01/Python笔记（一）/index.html">
 <meta property="og:site_name" content="YuanTechnology">
+<meta property="og:description" content="##Python笔记（一） @(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示为list类型type((Fa">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/2015514101804370.jpg">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180109160709.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM图片20180109162322.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM图片20180109170437.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM图片20180109194836.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM图片20180109201813.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180109200401.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180109203058.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180109204804.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180109235755.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180110000949.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180110002425.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180110003452.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180110003939.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180110214951.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180111182105.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180111185959.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180111194359.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180111193112.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180111195127.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180112222846.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180113215857.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180113222757.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180114005723.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180114153554.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180114161935.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180114170336.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180114183848.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180114192222.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180115182205.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180115221220.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180115221905.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180115230056.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180115231652.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180116160437.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180116212037.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/5a40f2500001526e19201080.jpg">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118172719.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118174151.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118190333.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118190706.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118210745.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118211358.png">
+<meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118212122.png">
+<meta property="og:updated_time" content="2018-01-31T16:41:00.244Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YuanTechnology">
+<meta name="twitter:description" content="##Python笔记（一） @(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示为list类型type((Fa">
+<meta name="twitter:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/2015514101804370.jpg">
     
 
     
@@ -202,8 +251,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 </aside>
 
             
-            <section id="main">
-    <article id="post-Python笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-Python笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -701,261 +749,30 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
         </footer>
     </div>
     
-</article>
-
-
-
-    <article id="post-爱KG爱编程" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+<nav id="article-nav">
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/30/爱KG爱编程/">爱KG爱编程</a>
-        </h1>
     
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/01/30/爱KG爱编程/">
-            <time datetime="2018-01-30T15:12:59.000Z" itemprop="datePublished">2018-01-30</time>
+        <a href="/2018/01/30/爱KG爱编程/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">爱KG爱编程</div>
         </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>##Anything is possible！</p>
-<p>###Learn C language<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Hello,world!"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yuan.technology/2018/01/30/爱KG爱编程/" data-id="cjd3aueeq00008wv69jipq8ke" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
-        <a href="http://yuan.technology/2018/01/30/爱KG爱编程/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/爱KG爱编程/">Comentarios</a>
-    
+</nav>
 
-        </footer>
-    </div>
+
     
 </article>
 
 
-
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/30/hello-world/">Hello World</a>
-        </h1>
     
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/01/30/hello-world/">
-            <time datetime="2018-01-30T09:16:02.053Z" itemprop="datePublished">2018-01-30</time>
-        </a>
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yuan.technology/2018/01/30/hello-world/" data-id="cjd3aueff00028wv60q1m5y0n" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
+</section>
     
-        <a href="http://yuan.technology/2018/01/30/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/hello-world/">Comentarios</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
 
 </section>
             
@@ -1079,11 +896,13 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = '';
+            this.page.url = 'http://yuan.technology/2018/02/01/Python笔记（一）/';
+        
+        this.page.identifier = 'Python笔记（一）';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'yuan-technology' + '.disqus.com/count.js';
+        s.src = '//' + 'yuan-technology' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
