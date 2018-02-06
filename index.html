@@ -76,7 +76,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="st-default-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="st-default-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <script type="text/javascript">
@@ -126,7 +126,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="st-default-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="st-default-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -146,16 +146,16 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
             <h2 id="name">yuanziwoxin</h2>
             <h3 id="title">Web Developer &amp; Designer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Ji&#39;An, China</span>
-            <a id="follow" target="_blank" href="https://github.com/yuanziwoxin/">SEGUIR</a>
+            <a id="follow" target="_blank" href="https://github.com/yuanziwoxin/">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 4
-                <span>Entradas</span>
+                <span>posts</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>Etiqueta</span>
+                <span>tag</span>
             </div>
         </div>
         
@@ -250,7 +250,10 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 <p><strong>拓展：</strong><br>输入3个整数a,b,c, 要求按照从小到大的顺序将它们输出，用函数实现。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">输入3个整数a,b,c,要求按照从小到大的顺序输出，利用函数的形式 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">exchange</span><span class="params">(<span class="keyword">int</span> *p1,<span class="keyword">int</span> *p2,<span class="keyword">int</span> *p3)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> *pointer_1,*pointer_2,*pointer_3,a,b,c;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Please enter three numbers:"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">	pointer_1=&amp;a;</span><br><span class="line">	pointer_2=&amp;b;</span><br><span class="line">	pointer_3=&amp;c;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,pointer_1); </span><br><span class="line">	exchange(pointer_1,pointer_2,pointer_3);  <span class="comment">//注意：exchange函数中的参数都是指针变量 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d %d\n"</span>,*pointer_1,*pointer_2,*pointer_3); </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,pointer_1); <span class="comment">//可以发现实参指针变量在执行完调用函数后依然没有改变 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exchange</span><span class="params">(<span class="keyword">int</span> *p1,<span class="keyword">int</span> *p2,<span class="keyword">int</span> *p3)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *p_1,<span class="keyword">int</span> *p_2)</span></span>;</span><br><span class="line">	<span class="keyword">if</span>(*p1&gt;*p2)</span><br><span class="line">		swap(p1,p2);  <span class="comment">//swap函数中的参数是指针变量，但其中交换的是指针变量指向的变量的值 </span></span><br><span class="line">	<span class="keyword">if</span>(*p2&gt;*p3)</span><br><span class="line">		swap(p2,p3);</span><br><span class="line">	<span class="keyword">if</span>(*p1&gt;*p3)</span><br><span class="line">		swap(p1,p3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *p_1,<span class="keyword">int</span> *p_2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	temp=*p_1;</span><br><span class="line">	*p_1=*p_2;</span><br><span class="line">	*p_2=temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>注意：</strong><br>main函数中的3个实参指针变量的值在执行完调用函数并未改变，这就正好说明前面所说的<strong>“执行完调用函数，并不能改变实参指针变量的值，但是可以改变实参指针变量指向的变量的值”</strong></p>
 <ul>
-<li><strong>2. 如何遍历数组中的全部元素</strong><br>引用一个数组元素主要有以下两种方法：<br>（1）下标法：如 a[i];<br>（2）指针法：<br>| 格 式 | 具体说明|<br>| :——: | :———: |<br>|<em>(a+i)|a是数组名，通过数组名和元素序号计算元素地址，从而找到该元素|<br>|</em>(p+i)|p是指向数组元素的指针变量，其初值为p=a|<br><strong>注：</strong><br>(1)其实上面两者与a[i]是等价的;<br>(2)<em>(a+i)即使按数组首元素的地址加上相对位移量得到要找的元素的地址，然后找出该地址的内容。<br>相对位移量=i </em> 基本类型的字节长度；（如int类型一般就是4个字节，而char型一般就是1个字节）</li>
+<li><p><strong>2. 如何遍历数组中的全部元素</strong><br>引用一个数组元素主要有以下两种方法：<br>（1）下标法：如 a[i];<br>（2）指针法：</p>
+<p>| 格 式 | 具体说明|<br>| :——: | :———: |<br>|*(a+i)|a是数组名，通过数组名和元素序号计算元素地址，从而找到该元素|<br>|*(p+i)|p是指向数组元素的指针变量，其初值为p=a|</p>
+<p><strong>注：</strong><br>(1)其实上面两者与a[i]是等价的;<br>(2)<em>(a+i)即使按数组首元素的地址加上相对位移量得到要找的元素的地址，然后找出该地址的内容。<br>相对位移量=i </em> 基本类型的字节长度；（如int类型一般就是4个字节，而char型一般就是1个字节）</p>
+</li>
 </ul>
 <p>输出一个拥有10个元素的整形数组的全部元素。 </p>
 <p>方法 一：利用数组下标的方式访问数组元素<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">int</span> i,j,length;</span><br><span class="line">	length=<span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(<span class="keyword">int</span>); <span class="comment">//求出数组的长度 </span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;length;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;length;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a[j]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -298,7 +301,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/02/02/C语言笔记/" data-id="cjdb4q3lm0000k0v61bhc68n2" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yuan.technology/2018/02/02/C语言笔记/" data-id="cjdb5y1va0000fov6hqy4cupx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -366,7 +369,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
             
     
-        <a href="http://yuan.technology/2018/02/02/C语言笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/02/02/C语言笔记/">Comentarios</a>
+        <a href="http://yuan.technology/2018/02/02/C语言笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/02/02/C语言笔记/">Comments</a>
     
 
         </footer>
@@ -842,7 +845,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/02/01/Python笔记（一）/" data-id="cjdb4q3ns0004k0v6kvs8tnh8" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yuan.technology/2018/02/01/Python笔记（一）/" data-id="cjdb5y1xd0004fov658q9hq4n" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -910,7 +913,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
             
     
-        <a href="http://yuan.technology/2018/02/01/Python笔记（一）/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/02/01/Python笔记（一）/">Comentarios</a>
+        <a href="http://yuan.technology/2018/02/01/Python笔记（一）/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/02/01/Python笔记（一）/">Comments</a>
     
 
         </footer>
@@ -965,7 +968,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/01/30/爱KG爱编程/" data-id="cjdb4q3m00003k0v64uc3v7ly" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yuan.technology/2018/01/30/爱KG爱编程/" data-id="cjdb5y1vq0003fov6pd7tc7uh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1033,7 +1036,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
             
     
-        <a href="http://yuan.technology/2018/01/30/爱KG爱编程/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/爱KG爱编程/">Comentarios</a>
+        <a href="http://yuan.technology/2018/01/30/爱KG爱编程/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/爱KG爱编程/">Comments</a>
     
 
         </footer>
@@ -1095,7 +1098,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/01/30/hello-world/" data-id="cjdb4q3lv0002k0v62vhaf698" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yuan.technology/2018/01/30/hello-world/" data-id="cjdb5y1vk0002fov6ta4lgypx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1163,7 +1166,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
             
     
-        <a href="http://yuan.technology/2018/01/30/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/hello-world/">Comentarios</a>
+        <a href="http://yuan.technology/2018/01/30/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/hello-world/">Comments</a>
     
 
         </footer>
@@ -1179,7 +1182,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Recientes</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -1268,7 +1271,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Archivos</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li></ul>
         </div>
@@ -1281,7 +1284,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">Links</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
