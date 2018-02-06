@@ -5,12 +5,12 @@
     
     <title>YuanTechnology</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="##Python笔记（一） @(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示为list类型type((Fa">
+    <meta name="description" content="title：Python笔记（一）Python笔记（一）@(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示">
 <meta property="og:type" content="article">
 <meta property="og:title" content="YuanTechnology">
 <meta property="og:url" content="http://yuan.technology/2018/02/01/Python笔记（一）/index.html">
 <meta property="og:site_name" content="YuanTechnology">
-<meta property="og:description" content="##Python笔记（一） @(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示为list类型type((Fa">
+<meta property="og:description" content="title：Python笔记（一）Python笔记（一）@(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示">
 <meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/2015514101804370.jpg">
 <meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180109160709.png">
 <meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM图片20180109162322.png">
@@ -55,10 +55,10 @@
 <meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118210745.png">
 <meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118211358.png">
 <meta property="og:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/TIM截图20180118212122.png">
-<meta property="og:updated_time" content="2018-01-31T16:41:00.244Z">
+<meta property="og:updated_time" content="2018-02-06T04:01:49.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YuanTechnology">
-<meta name="twitter:description" content="##Python笔记（一） @(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示为list类型type((Fa">
+<meta name="twitter:description" content="title：Python笔记（一）Python笔记（一）@(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示">
 <meta name="twitter:image" content="http://yuan.technology/2018/02/01/Python笔记（一）/2015514101804370.jpg">
     
 
@@ -259,8 +259,8 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>##Python笔记（一）</p>
-<p>@(Python)</p>
+            <hr>
+<h2 id="title：Python笔记（一）"><a href="#title：Python笔记（一）" class="headerlink" title="title：Python笔记（一）"></a>title：Python笔记（一）</h2><h1 id="Python笔记（一）"><a href="#Python笔记（一）" class="headerlink" title="Python笔记（一）"></a>Python笔记（一）</h1><p>@(Python)</p>
 <ul>
 <li><p><strong>1.元组与列表的区别及元组的一些小细节</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">type((<span class="number">1</span>)) 	 	 <span class="comment">#这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号</span></span><br><span class="line">type((<span class="string">'hello'</span>))  <span class="comment">#这里显示为str类型，而不是tuple类型</span></span><br><span class="line">type([<span class="string">"hello"</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="keyword">False</span>]) <span class="comment">#显示为list类型</span></span><br><span class="line">type((<span class="keyword">False</span>,<span class="string">"hello"</span>,<span class="number">1</span>,<span class="number">4</span>)) <span class="comment">#显示为tuple类型</span></span><br><span class="line"><span class="comment">#注意：方括号为list类型，而圆括号为tuple类型</span></span><br><span class="line">type((<span class="number">1</span>,))       <span class="comment">#表示只有一个元素的元组</span></span><br><span class="line">type((<span class="string">"hello"</span>,)) <span class="comment">#表示只有一个元素的元组</span></span><br><span class="line">type(())		 <span class="comment">#这里显示为tuple类型</span></span><br><span class="line">type([<span class="number">1</span>])		 <span class="comment">#这里显示为list类型</span></span><br><span class="line"><span class="comment"># str,list,tuple都为序列，其许多相应操作都类似</span></span><br></pre></td></tr></table></figure>
@@ -509,7 +509,49 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 </ul>
 <p>反序列化：将某种格式的（如JSON格式）数据类型转化为特定语言（如Python）的数据类型的过程<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line">json_str = <span class="string">'&#123;"name": "王二小", "age": 15, "girl": false&#125;'</span>  <span class="comment">#注意：JSON数据格式中字符串用“双引号”括起来，JSON数据格式是与语言无关的，这点很容易造成错误。</span></span><br><span class="line">json_array = <span class="string">'[&#123;"name": "王二小", "age": 15, "girl": false&#125;, &#123;"name": "刘胡兰", "age": 18, "girl": true&#125;]'</span></span><br><span class="line">r = json.loads(json_str)  <span class="comment">#使用json.loads()函数把json数据格式转化为Python相应的数据格式，</span></span><br><span class="line"><span class="comment">#（1）JSON中的&#123;key:value,...&#125;格式（即JSON的一个数据对象）对应于Python中的字典数据类型（dict）</span></span><br><span class="line"><span class="comment">#（2）JSON中的array（数组）如（[&#123;"name":"王小二",...&#125;,&#123;"name":"刘胡兰", ...&#125;]）对应于Python中的列表类型（list）</span></span><br><span class="line">print(type(r))</span><br><span class="line">print(r)</span><br><span class="line">print(r[<span class="string">'name'</span>])    <span class="comment">#通过字典的访问数据项的形式就可以访问某个数据项的值</span></span><br><span class="line">print(r[<span class="string">'age'</span>])    </span><br><span class="line"></span><br><span class="line">r1 = json.loads(json_array)</span><br><span class="line">print(type(r1))</span><br><span class="line">print(r1)</span><br></pre></td></tr></table></figure></p>
 <p>运行结果：<br><img src="./TIM截图20180114183848.png" alt="Alt text"></p>
-<p><strong>JSON数据类型与Python数据类型的对应关系</strong><br>|  JSON  | Python |<br>| :—–:|:——:|<br>|object|dict|<br>|array|list|<br>|string|str|<br>|number|int|<br>|number|float|<br>|true|True|<br>|false|False|<br>|null|None|</p>
+<p><strong>JSON数据类型与Python数据类型的对应关系</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">JSON</th>
+<th style="text-align:center">Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">object</td>
+<td style="text-align:center">dict</td>
+</tr>
+<tr>
+<td style="text-align:center">array</td>
+<td style="text-align:center">list</td>
+</tr>
+<tr>
+<td style="text-align:center">string</td>
+<td style="text-align:center">str</td>
+</tr>
+<tr>
+<td style="text-align:center">number</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td style="text-align:center">number</td>
+<td style="text-align:center">float</td>
+</tr>
+<tr>
+<td style="text-align:center">true</td>
+<td style="text-align:center">True</td>
+</tr>
+<tr>
+<td style="text-align:center">false</td>
+<td style="text-align:center">False</td>
+</tr>
+<tr>
+<td style="text-align:center">null</td>
+<td style="text-align:center">None</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>39. 序列化</strong></li>
 </ul>
@@ -675,7 +717,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/02/01/Python笔记（一）/" data-id="cjdb3zuyq00042gv6e3yerwi2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/02/01/Python笔记（一）/" data-id="cjdb4eraw0004zwv6xjm0pdsr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
