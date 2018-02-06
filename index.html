@@ -267,14 +267,62 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 </ul>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*(++p)则是下面两步的组合：</span><br><span class="line">第一步：p++</span><br><span class="line">第二步：*p</span><br><span class="line"><span class="comment">//先使p值加1，再取*p；</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">++(*p)则表示p所指向的元素值加<span class="number">1</span>，如果p=a,则++(*p)相当于++a[<span class="number">0</span>].</span><br></pre></td></tr></table></figure>
-<p><strong>（3）如果p当前指向a数组中第i个元素a[i],则下列表达形式一一对应：</strong><br>|第一种表达方式|对应的第二种表达方式|<br>|:——-: |:———:|<br>|<em>(p- -)|a[i++]|<br>|</em>(++p)|a[++i]|<br>|*(- -p)|a[- -i]|</p>
+<p><strong>（3）如果p当前指向a数组中第i个元素a[i],则下列表达形式一一对应：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">第一种表达方式</th>
+<th style="text-align:center">对应的第二种表达方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">*(p- -)</td>
+<td style="text-align:center">a[i++]</td>
+</tr>
+<tr>
+<td style="text-align:center">*(++p)</td>
+<td style="text-align:center">a[++i]</td>
+</tr>
+<tr>
+<td style="text-align:center">*(- -p)</td>
+<td style="text-align:center">a[- -i]</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>4. 用数组名作函数参数和用变量名作函数参数</strong></li>
 </ul>
 <p><strong>(1)</strong>当用<strong>数组名作函数参数</strong>时，如果形参数组中各元素的值发生变化，则<strong>实参数组元素的值</strong>也随之发生<strong>变化</strong>。（常使用这种方法改变实参数组的值）<br>实参数组名代表数组首元素的地址，而形参是用来接收来自实参传递过来的数组首元素地址的。因此，形参应该是一个指针变量（只有指针变量才能存放地址）。实际上，C编译都是将形参数组名作为指针变量来处理的。</p>
 <p>例：<br>函数fun的参数写成数组形式<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fun(<span class="keyword">int</span> arr[],<span class="keyword">int</span> n) </span><br><span class="line"><span class="comment">//arr为形参数组名</span></span><br></pre></td></tr></table></figure></p>
 <p>但程序在编译时是将形参数组名arr按指针变量处理的，相当于将fun的首部写成<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fun(<span class="keyword">int</span> *arr,<span class="keyword">int</span> n)</span><br></pre></td></tr></table></figure></p>
-<p>这两种写法完全等价。<br><strong>（2）</strong>以变量名和数组名作为函数参数的比较<br>|实参类型|变量名|数组名|<br>|:———-:|:—-:|:———-: |<br>|要求形参的类型|变量名|数组名或指针变量|<br>|传递的信息|变量的值|实参数组首元素的地址|<br>|通过函数调用能否改变实参的值|不能<strong>实参变量</strong>的值|<strong>能</strong>改变<strong>实参数组</strong>的值|</p>
+<p>这两种写法完全等价。<br><strong>（2）</strong>以变量名和数组名作为函数参数的比较</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">实参类型</th>
+<th style="text-align:center">变量名</th>
+<th style="text-align:center">数组名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">要求形参的类型</td>
+<td style="text-align:center">变量名</td>
+<td style="text-align:center">数组名或指针变量</td>
+</tr>
+<tr>
+<td style="text-align:center">传递的信息</td>
+<td style="text-align:center">变量的值</td>
+<td style="text-align:center">实参数组首元素的地址</td>
+</tr>
+<tr>
+<td style="text-align:center">通过函数调用能否改变实参的值</td>
+<td style="text-align:center">不能<strong>实参变量</strong>的值</td>
+<td style="text-align:center"><strong>能</strong>改变<strong>实参数组</strong>的值</td>
+</tr>
+</tbody>
+</table>
 <p><strong>注：</strong><br><strong>实参数组名</strong>代表一个<strong>固定的地址</strong>，或者说是<strong>指针常量</strong>，但<strong>形参数组名</strong>并不是一个固定的地址，而是按<strong>指针变量</strong>处理。<br><strong>（3）</strong>用数组名作函数参数<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">将数组a中n个整数按相反顺序存放。 (两头的元素相互交换)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">inv</span><span class="params">(<span class="keyword">int</span> *arr,<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">1</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> i,length;</span><br><span class="line">	length=<span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(<span class="keyword">int</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"The original order is:\n"</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;length;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	inv(a,length);<span class="comment">//两头交换顺序 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"The new order is:\n"</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;length;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inv</span><span class="params">(<span class="keyword">int</span> arr[],<span class="keyword">int</span> n)</span> <span class="comment">//写成int *arr也可以 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">0</span>,j,temp;</span><br><span class="line">	<span class="keyword">int</span> flag=n/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;flag)</span><br><span class="line">	&#123;</span><br><span class="line">		j=n-i<span class="number">-1</span>;</span><br><span class="line">		temp=arr[i];</span><br><span class="line">		arr[i]=arr[j];</span><br><span class="line">		arr[j]=temp;</span><br><span class="line">		i++;	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>（4）</strong>用指针变量作函数参数<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">inv</span><span class="params">(<span class="keyword">int</span> *arr,<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">1</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">4</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> i,length;</span><br><span class="line">	length=<span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(<span class="keyword">int</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"The original order is:\n"</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;length;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	inv(a,length);<span class="comment">//两头交换顺序 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"The new order is:\n"</span>);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;length;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//改进之后</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inv</span><span class="params">(<span class="keyword">int</span> *arr,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> *i,*j,*p,temp;</span><br><span class="line">	<span class="keyword">int</span> flag=n/<span class="number">2</span>;</span><br><span class="line">	i=arr;</span><br><span class="line">	j=arr+n<span class="number">-1</span>;</span><br><span class="line">	p=arr+flag;</span><br><span class="line">	<span class="keyword">for</span>(;i&lt;p;i++,j--)</span><br><span class="line">	&#123;</span><br><span class="line">		temp=*i;</span><br><span class="line">		*i=*j;</span><br><span class="line">		*j=temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>（5）</strong>如果用<strong>指针变量作实参</strong>，必须<strong>先使指针变量有一个确定值</strong>，指向一个已定义的对象。<br>如下面是不正确的：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> *x,<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> *p;<span class="comment">//指针变量未指向数组元素（或者说一个已定义的对象）。</span></span><br><span class="line">	...</span><br><span class="line">	f(p,<span class="number">10</span>);</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> *x,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -282,7 +330,49 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 <ul>
 <li><strong>5. 使用指针引用多维数组</strong></li>
 </ul>
-<p><strong>（1）</strong>二维数组a的有关指针<br>|表示形式|含义|地址|<br>|:——:|:—-:|:——–:|<br>|a|二维数组名，指向一维数组a[0],即0行首地址|2000|<br>|a[0],*(a+0),*a|0行0列元素地址|2000|<br>|a+1,&amp;a[1]|1行首地址|2016|<br>|a[1],<em>(a+1)|1行0列的地址，即&amp;a[1][0]|2016|<br>|a[1]+2,\</em>(a+1)+2,&amp;a[1][2]|1行2列元素地址,即&amp;a[1][2]|2024|<br>|*(a[1]+2),*(<em>(a+1)+2),a[1][2]|1行2列元素的值，即a[1][2]|元素值为13|<br><em>*注：</em></em><br>(1) 二维数组a的定义如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">3</span>][<span class="number">4</span>]=&#123;&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>&#125;,&#123;<span class="number">9</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">15</span>&#125;,&#123;<span class="number">17</span>,<span class="number">19</span>,<span class="number">21</span>,<span class="number">23</span>&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>（1）</strong>二维数组a的有关指针</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">表示形式</th>
+<th style="text-align:center">含义</th>
+<th style="text-align:center">地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:center">二维数组名，指向一维数组a[0],即0行首地址</td>
+<td style="text-align:center">2000</td>
+</tr>
+<tr>
+<td style="text-align:center">a[0],*(a+0),*a</td>
+<td style="text-align:center">0行0列元素地址</td>
+<td style="text-align:center">2000</td>
+</tr>
+<tr>
+<td style="text-align:center">a+1,&amp;a[1]</td>
+<td style="text-align:center">1行首地址</td>
+<td style="text-align:center">2016</td>
+</tr>
+<tr>
+<td style="text-align:center">a[1],*(a+1)</td>
+<td style="text-align:center">1行0列的地址，即&amp;a[1][0]</td>
+<td style="text-align:center">2016</td>
+</tr>
+<tr>
+<td style="text-align:center">a[1]+2,*(a+1)+2,&amp;a[1][2]</td>
+<td style="text-align:center">1行2列元素地址,即&amp;a[1][2]</td>
+<td style="text-align:center">2024</td>
+</tr>
+<tr>
+<td style="text-align:center">*(a[1]+2),*(*(a+1)+2),a[1][2]</td>
+<td style="text-align:center">1行2列元素的值，即a[1][2]</td>
+<td style="text-align:center">元素值为13</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注：</strong><br>(1) 二维数组a的定义如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">3</span>][<span class="number">4</span>]=&#123;&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>&#125;,&#123;<span class="number">9</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">15</span>&#125;,&#123;<span class="number">17</span>,<span class="number">19</span>,<span class="number">21</span>,<span class="number">23</span>&#125;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>且假设二维数组a的首行的首地址为2000.<br>(2) C语言规定了数组名代表数组首元素的地址。所以<br>a为二维数组名，指向一维数组a[0]（二维数组的首元素），即0行首地址；<br>a[0]为一维数组名，指向一维数组的首元素即a[0][0]，即0行0列元素地址；<br>(3) a+1是二维数组a中序号为1的行的首地址（序号从0算起），即1行首地址，因为a是二维数组名，指向一维数组a[0]，表示0行首地址。<strong>千万不要和a[0]+1搞混，</strong>a[0]+1表示0行1列元素的地址。<br>(4) *(a+1)表示1行0列元素地址，即&amp;a[1][0]，和a[1]等价。</p>
 <p>(5) <strong>二维数组名</strong>（如a）是指向<strong>行</strong>的。因此a+1中的‘1’代表一行中全部元素所占的字节数（一行有4个整形元素，所以占16个字节）。<strong>一维数组名</strong>（如a[0],a[1]）是指向<strong>列元素</strong>的。因此a[0]+1中的‘1’代表一个元素所占的字节数（一个整形元素，所以占4个字节）。<br>(6) 在<strong>指向行的指针</strong>前面加一个*号，就转换为<strong>指向列的指针</strong>。<br>(7) 在<strong>指向列的指针</strong>前面加一个&amp;号，就转换为<strong>指向行的指针</strong>。<br>(8) a[0]指向0行0列元素的指针，&amp;a[0]则指向二维数组的0行，与a等价。因为a[0]与<em>(a+0)等价，因此&amp;a[0]与&amp;\</em>a等价，也就是与a等价，它指向二维数组的0行。<br>(9) &amp;a[i]和a[i]的值虽然一样，但它们的含义不一样。<strong>&amp;a[i]</strong>或<strong>a+i</strong>指向<strong>行</strong>，而<strong>a[i]</strong>或<strong>*(a+i)</strong>指向<strong>列</strong>。</p>
 <ul>
@@ -290,7 +380,26 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 </li>
 </ul>
 <p><strong>(2)</strong>指向由m个元素组成的<strong>一维数组</strong>的指针变量<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">指向m个元素组成的一维数组的指针变量 </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">3</span>][<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">17</span>,<span class="number">19</span>,<span class="number">21</span>,<span class="number">23</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> (*p)[<span class="number">4</span>],i,j;</span><br><span class="line">	p=a;   <span class="comment">// p的值是一维数组a[0]的起始地址;</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Please enter row and column:\t"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d,%d"</span>,&amp;i,&amp;j);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"a[%d,%d]=%d\n"</span>,i,j,*(*(p+i)+j));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>注：</strong><br>（1）int (<em>p)[4]表示定义p为一个指针变量，它指向包含4个整形元素的一维数组。<br>（2）\</em>p两侧的括号不可以缺少， 若写成*p[4]则表示指针数组。（因为方括号[ ]的运算优先级别高）<br>（3）<br>|格式|含义|<br>|:—–:|:——:|<br>| int a[4]|a有4个元素，每个元素都是整型|<br>|int (*p)[4]|*p有4个元素，每个元素为整型。也即p所指的对象是有4个整型元素的数组，即p是指向一维数组的指针。|<br>（4）int (*p)[4]中的<strong>p</strong>的类型不是int <em>类型，而是int (\</em>)[4]型，p被定义为指向一维整形数组的指针变量，一维数组有4个元素，因此p的基类型为一维数组，其长度是16字节。<br><strong>（3）</strong>一个需要注意的地方<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>&#125;; <span class="comment">//这里是一维数组</span></span><br><span class="line">	<span class="keyword">int</span> (*p)[<span class="number">4</span>];</span><br><span class="line">	<span class="comment">//不能写成 p=a,因为这样写表示p的值是&amp;a[0],指向a[0],一维数组名表示首元素的地址; </span></span><br><span class="line">	p=&amp;a;  <span class="comment">//表示p指向一维数组（行） </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(*p)[<span class="number">2</span>]);<span class="comment">//表示访问p所指向一维数组（行）中的序号为2的元素; </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>注：</strong><br>（1）int (<em>p)[4]表示定义p为一个指针变量，它指向包含4个整形元素的一维数组。<br>（2）\</em>p两侧的括号不可以缺少， 若写成*p[4]则表示指针数组。（因为方括号[ ]的运算优先级别高）<br>（3）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">格式</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">int a[4]</td>
+<td style="text-align:center">a有4个元素，每个元素都是整型</td>
+</tr>
+<tr>
+<td style="text-align:center">int (*p)[4]</td>
+<td style="text-align:center">*p有4个元素，每个元素为整型。也即p所指的对象是有4个整型元素的数组，即p是指向一维数组的指针。</td>
+</tr>
+</tbody>
+</table>
+<p>（4）int (*p)[4]中的<strong>p</strong>的类型不是int <em>类型，而是int (\</em>)[4]型，p被定义为指向一维整形数组的指针变量，一维数组有4个元素，因此p的基类型为一维数组，其长度是16字节。<br><strong>（3）</strong>一个需要注意的地方<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>&#125;; <span class="comment">//这里是一维数组</span></span><br><span class="line">	<span class="keyword">int</span> (*p)[<span class="number">4</span>];</span><br><span class="line">	<span class="comment">//不能写成 p=a,因为这样写表示p的值是&amp;a[0],指向a[0],一维数组名表示首元素的地址; </span></span><br><span class="line">	p=&amp;a;  <span class="comment">//表示p指向一维数组（行） </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(*p)[<span class="number">2</span>]);<span class="comment">//表示访问p所指向一维数组（行）中的序号为2的元素; </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
         
         </div>
@@ -301,7 +410,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/02/02/C语言笔记/" data-id="cjdb5y1va0000fov6hqy4cupx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/02/02/C语言笔记/" data-id="cjdb62i2d0000y4v6ur6bg3jy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -845,7 +954,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/02/01/Python笔记（一）/" data-id="cjdb5y1xd0004fov658q9hq4n" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/02/01/Python笔记（一）/" data-id="cjdb62i490004y4v6jujjxdkw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -968,7 +1077,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/01/30/爱KG爱编程/" data-id="cjdb5y1vq0003fov6pd7tc7uh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/01/30/爱KG爱编程/" data-id="cjdb62i2q0003y4v6or23htbz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1098,7 +1207,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/01/30/hello-world/" data-id="cjdb5y1vk0002fov6ta4lgypx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/01/30/hello-world/" data-id="cjdb62i2m0002y4v6eoird2uc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
