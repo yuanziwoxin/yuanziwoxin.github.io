@@ -76,7 +76,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="st-default-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="st-default-search-input search-form-input" placeholder="Rechercher" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <script type="text/javascript">
@@ -126,7 +126,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="st-default-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="st-default-search-input search-form-input" placeholder="Rechercher" />
     </div>
 
                 </td>
@@ -146,16 +146,16 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
             <h2 id="name">yuanziwoxin</h2>
             <h3 id="title">Web Developer &amp; Designer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Ji&#39;An, China</span>
-            <a id="follow" target="_blank" href="https://github.com/yuanziwoxin/">FOLLOW</a>
+            <a id="follow" target="_blank" href="https://github.com/yuanziwoxin/">SUIVRE</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 4
-                <span>posts</span>
+                <span>Articles</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>tag</span>
+                <span>Tag</span>
             </div>
         </div>
         
@@ -400,6 +400,70 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 </tbody>
 </table>
 <p>（4）int (*p)[4]中的<strong>p</strong>的类型不是int <em>类型，而是int (\</em>)[4]型，p被定义为指向一维整形数组的指针变量，一维数组有4个元素，因此p的基类型为一维数组，其长度是16字节。<br><strong>（3）</strong>一个需要注意的地方<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>&#125;; <span class="comment">//这里是一维数组</span></span><br><span class="line">	<span class="keyword">int</span> (*p)[<span class="number">4</span>];</span><br><span class="line">	<span class="comment">//不能写成 p=a,因为这样写表示p的值是&amp;a[0],指向a[0],一维数组名表示首元素的地址; </span></span><br><span class="line">	p=&amp;a;  <span class="comment">//表示p指向一维数组（行） </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,(*p)[<span class="number">2</span>]);<span class="comment">//表示访问p所指向一维数组（行）中的序号为2的元素; </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><strong>7. 引用一个字符串的方法</strong></li>
+</ul>
+<p><strong>(1)</strong> 用<strong>字符数组</strong>存放一个字符串，可以通过<strong>数组名和下标</strong>引用字符串中一个字符，也可通过<strong>数组名和格式声明”%s”</strong>输出该字符串。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> <span class="built_in">string</span>[]=<span class="string">"I love China!"</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n"</span>,<span class="built_in">string</span>);<span class="comment">//用%s格式声明输出string,可以输出整个字符串。</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%c\n"</span>,<span class="built_in">string</span>[<span class="number">3</span>]);<span class="comment">//使用%c格式输出一个字符数组元素。</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>(2)</strong>用<strong>字符指针变量</strong>指向一个<strong>字符串常量</strong>，通过字符指针变量引用字符串常量。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//指针变量string指向字符串的第1个字符</span></span><br><span class="line"><span class="keyword">char</span> *<span class="built_in">string</span>=<span class="string">"I love China!"</span>;<span class="comment">//定义指针变量并初始化。</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n"</span>,<span class="built_in">string</span>);</span><br></pre></td></tr></table></figure></p>
+<p><strong>注：</strong><br>（1）C语言中只有字符变量，<strong>没有字符串变量</strong>。<br>（2）这两者是等价的<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *<span class="built_in">string</span>=<span class="string">"I am a student"</span>;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *<span class="built_in">string</span>;</span><br><span class="line"><span class="built_in">string</span>=<span class="string">"I am a student"</span>;</span><br></pre></td></tr></table></figure>
+<p>上述语句都是将字符串的第一个字符的地址赋给指针变量string，此后string就指向“I am a student”.<br>当然也可以对string重新赋值，从而改变string的指向。<br>（3）%s是输出字符串时所用的格式符，在输出项中给出字符指针变量名string，则系统会输出string所指向的第一个字符，<strong>然后自动使string加1</strong>，使之指向下一个字符，再输出该字符……如此直到遇到字符串结束标志’\0’为止。</p>
+<ul>
+<li><strong>8.复制一个字符数组到另外一个字符数组（字符串间的复制）—— 一种效果的多种实现方式</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">copy_string</span><span class="params">(<span class="keyword">char</span> *a,<span class="keyword">char</span> *b)</span></span>;</span><br><span class="line">	<span class="keyword">char</span> a[]=<span class="string">"I am a teacher."</span>;</span><br><span class="line">	<span class="keyword">char</span> b[]=<span class="string">"You are a student."</span>;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"String a is: %s\n"</span>,a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"String b is: %s\n"</span>,b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"copy string a to string b:\n"</span>);</span><br><span class="line">	copy_string(a,b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"String a is: %s\n"</span>,a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"String b is: %s\n"</span>,b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">copy_string</span><span class="params">(<span class="keyword">char</span> *a,<span class="keyword">char</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(;*b++=*a++;); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>上述copy_string函数中可以有多种不同方式而实现相同的效果。 </strong></p>
+<p><strong>(1)</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(*a!=<span class="string">'\0'</span>)</span><br><span class="line">&#123;</span><br><span class="line">	*b++=*a++;</span><br><span class="line">&#125;</span><br><span class="line">*b=<span class="string">'\0'</span>;</span><br><span class="line">```	</span><br><span class="line">**(<span class="number">2</span>)**</span><br><span class="line">```C</span><br><span class="line"><span class="keyword">while</span>((*b=*a)!=<span class="string">'\0'</span>)</span><br><span class="line">&#123;</span><br><span class="line">	b++;</span><br><span class="line">	a++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>(3)</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>((*b++=*a++)!=<span class="string">'\0'</span>);</span><br></pre></td></tr></table></figure></p>
+<p><strong>(4)</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意"\0"的ASCII码为0; </span></span><br><span class="line"><span class="keyword">while</span>((*b++=*a++)!=<span class="number">0</span>);<span class="comment">//千万不要忘了加";"</span></span><br></pre></td></tr></table></figure></p>
+<p>也可以写成<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">while</span>(*b++=*a++);</span><br><span class="line">``` </span><br><span class="line">**注：**不等于<span class="number">0</span>也就是表示为真, 这里表示先把*a的值赋值给*b,再判断*b是否为<span class="number">0</span>（<span class="string">'\0'</span>的ASCII值为<span class="number">0</span>），为<span class="number">0</span>则跳出<span class="keyword">while</span>循环，否则继续将a数组中的未复制的字符复制到b数组中去。 </span><br><span class="line">**(<span class="number">5</span>)**</span><br><span class="line">```C</span><br><span class="line"><span class="keyword">for</span>(;*b++=*a++;);</span><br></pre></td></tr></table></figure></p>
+<p> 或<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(;(*b++=*a++)!=<span class="number">0</span>;);</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><strong>9. 用字符指针作为函数参数时，实参与形参的类型的对应关系有如下几种：</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">实参</th>
+<th style="text-align:center">形参</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">字符数组名</td>
+<td style="text-align:center">字符数组名</td>
+</tr>
+<tr>
+<td style="text-align:center">字符数组名</td>
+<td style="text-align:center">字符指针变量</td>
+</tr>
+<tr>
+<td style="text-align:center">字符指针变量</td>
+<td style="text-align:center">字符指针变量</td>
+</tr>
+<tr>
+<td style="text-align:center">字符指针变量</td>
+<td style="text-align:center">字符数组名</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>10. 字符指针变量和字符数组的比较（七个小点）</strong></li>
+</ul>
+<p><strong>（1）</strong>字符数组由若干个元素组成，每个元素中放一个字符。而字符指针变量中存放的是地址（字符串中第一个字符的地址）。<br><strong>（2）赋值方式：</strong>可以对字符指针变量赋值，但不能对数组名赋值。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *a;<span class="comment">//定义a为字符指针变量</span></span><br><span class="line">a=<span class="string">"I love China!"</span>;<span class="comment">//将字符串首元素的地址赋给指针变量。合法。</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">14</span>];</span><br><span class="line">str[<span class="number">0</span>]=<span class="string">'I'</span>;<span class="comment">//对字符数组元素赋值，合法。</span></span><br><span class="line">str=<span class="string">"I love China!"</span>;<span class="comment">//数组名是地址，是常量，不能被赋值，非法。</span></span><br></pre></td></tr></table></figure>
+<p><strong>（3）</strong>初始化</p>
+<p><strong>字符指针变量的赋值</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *a=<span class="string">"I love China!"</span>;<span class="comment">//定义并赋值。</span></span><br></pre></td></tr></table></figure></p>
+<p>等价于<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *a;<span class="comment">//先定义</span></span><br><span class="line">a=<span class="string">"I love China!"</span>; <span class="comment">//再赋值</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>数组的初始化</strong><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">14</span>]=<span class="string">"I love China!"</span>;<span class="comment">//定义字符数组str，并把字符串赋给数组中各元素。合法。</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>不</strong>等价于（下面这种字符数组的初始化是<strong>非法的</strong>）<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">14</span>];</span><br><span class="line">str[]=<span class="string">"I love China!"</span>;<span class="comment">//企图把字符串赋给数组中各元素。错误。</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>注：</strong><br><strong>数组可以在定义时对各元素赋初值，但不能用赋值语句对字符数组中全部元素整体赋值。</strong><br><strong>（4）</strong>存储单元的内容。编译时<strong>字符数组</strong>分配<strong>若干存储单元</strong>，以存放各元素的值；而对<strong>字符指针变量</strong>，只分配<strong>一个存储单元</strong>（Visual C++为指针变量分配4个字节）。<br><strong>（5）</strong>如果定义了<strong>字符数组</strong>，但未对它赋值，这时数组中的元素的值是<strong>不可预料的</strong>。可以引用（如输出）这些值，结果显然是<strong>无意义的</strong>，但不会造成严重的后果，容易发现和改正。<br>如果定义<strong>字符指针变量</strong>，应当及时把一个字符变量（或字符数组元素）的地址赋值给它，使它指向一个字符型数据，如果未对它赋予一个地址值，它并未具体指向一个确定的对象。此时如果向该指针变量所指向的对象输入数据，<strong>可能</strong>会造成<strong>严重的后果</strong>。（<strong>定义了字符指针变量应及时赋值</strong>）<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *a;<span class="comment">//定义字符指针变量a</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,a);<span class="comment">//企图从键盘输入一个字符串，使a指向该字符串。错误。</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>注意：</strong>此时a的值是不可预料的，它可能指向内存中空白的（未用的）用户存储区（好的情况），也有可能指向内存中已存储指令或数据的有用内存段，这就会破坏程序或有用数据，甚至破坏了系统，会造成严重的结果。<br>因此在定义指针变量后，及时指定其指向，如：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *a,str[<span class="number">10</span>];</span><br><span class="line">a=str;<span class="comment">//使a指向str数组的首元素</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,a);<span class="comment">//从键盘输入一个字符串存放到a所指向的一段存储单元中。正确。</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>（5）</strong> <strong>指针变量的值</strong>是<strong>可改变的</strong>；而<strong>数组名</strong>代表一个<strong>固定的值</strong>（数组元素的地址），是<strong>不可改变的</strong>。</p>
+<p>改变指针变量的值<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *a=<span class="string">"I love China!"</span>;</span><br><span class="line">a=a+<span class="number">7</span>;<span class="comment">//改变指针变量的值，使a指向字符串中的第7个字符。</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s"</span>,a);<span class="comment">//输出的结果为“China！”</span></span><br></pre></td></tr></table></figure></p>
+<p>下面是错误的<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[]=&#123;<span class="string">"I love China!"</span>&#125;;</span><br><span class="line">str=str+<span class="number">7</span>;<span class="comment">//错误</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s"</span>,str);</span><br></pre></td></tr></table></figure></p>
+<p><strong>（6）</strong> <strong>字符数组</strong>中<strong>各元素的值</strong>是可以改变的（<strong>可以</strong>对它们<strong>再赋值</strong>）；但<strong>字符指针变量指向的字符串常量中的内容</strong>是不可以被取代的（<strong>不能</strong>对它们<strong>再赋值</strong>）。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[]=<span class="string">"House"</span>;</span><br><span class="line"><span class="keyword">char</span> *b=<span class="string">"House"</span>;</span><br><span class="line">a[<span class="number">2</span>]=<span class="string">'r'</span>;<span class="comment">//合法，r取代a数组元素a[2]的原值u.</span></span><br><span class="line">b[<span class="number">2</span>]=<span class="string">'r'</span>;<span class="comment">//非法。字符串常量不能改变。</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>（7）</strong>用指针变量指向一个格式字符串，可以用它代替printf函数中的格式字符串。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *format;</span><br><span class="line">format=<span class="string">"a=%d,b=%f\n"</span>;<span class="comment">//使format指向一个字符串。</span></span><br><span class="line"><span class="built_in">printf</span>(format,a,b);<span class="comment">//这种printf函数称为可变格式输出函数。</span></span><br></pre></td></tr></table></figure></p>
 
         
         </div>
@@ -410,7 +474,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/02/02/C语言笔记/" data-id="cjdb62i2d0000y4v6ur6bg3jy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/02/02/C语言笔记/" data-id="cjdjqhh2z0000rkv6ol1gjs54" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -478,7 +542,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
             
     
-        <a href="http://yuan.technology/2018/02/02/C语言笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/02/02/C语言笔记/">Comments</a>
+        <a href="http://yuan.technology/2018/02/02/C语言笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/02/02/C语言笔记/">Commentaires</a>
     
 
         </footer>
@@ -954,7 +1018,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/02/01/Python笔记（一）/" data-id="cjdb62i490004y4v6jujjxdkw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/02/01/Python笔记（一）/" data-id="cjdjqhh4d0004rkv6xri3dfrh" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1022,7 +1086,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
             
     
-        <a href="http://yuan.technology/2018/02/01/Python笔记（一）/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/02/01/Python笔记（一）/">Comments</a>
+        <a href="http://yuan.technology/2018/02/01/Python笔记（一）/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/02/01/Python笔记（一）/">Commentaires</a>
     
 
         </footer>
@@ -1077,7 +1141,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/01/30/爱KG爱编程/" data-id="cjdb62i2q0003y4v6or23htbz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/01/30/爱KG爱编程/" data-id="cjdjqhh3d0003rkv6h7afsuic" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1145,7 +1209,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
             
     
-        <a href="http://yuan.technology/2018/01/30/爱KG爱编程/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/爱KG爱编程/">Comments</a>
+        <a href="http://yuan.technology/2018/01/30/爱KG爱编程/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/爱KG爱编程/">Commentaires</a>
     
 
         </footer>
@@ -1207,7 +1271,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/01/30/hello-world/" data-id="cjdb62i2m0002y4v6eoird2uc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/01/30/hello-world/" data-id="cjdjqhh390002rkv625lxbt49" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1275,7 +1339,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
             
     
-        <a href="http://yuan.technology/2018/01/30/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/hello-world/">Comments</a>
+        <a href="http://yuan.technology/2018/01/30/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yuan.technology/2018/01/30/hello-world/">Commentaires</a>
     
 
         </footer>
@@ -1291,7 +1355,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">recent</h3>
+        <h3 class="widget-title">Récents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -1380,7 +1444,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">Archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li></ul>
         </div>
@@ -1393,7 +1457,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
+        <h3 class="widget-title">Liens</h3>
         <div class="widget">
             <ul>
                 
