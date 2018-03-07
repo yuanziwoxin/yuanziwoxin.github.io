@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yuan.technology/2018/02/02/C语言笔记/index.html">
 <meta property="og:site_name" content="YuanTechnology">
 <meta property="og:description" content="C语言笔记@(C language)  1.输入a和b两个整数,按先大后小的顺序输出a和b  方法一： 利用改变指针变量的值来实现（即改变指针的指向）123456789101112131415161718192021222324#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;/*输入a和b两个整数，按先大后小的顺序输出a和b; 方法一：利用改变指针">
-<meta property="og:updated_time" content="2018-03-07T04:05:28.965Z">
+<meta property="og:updated_time" content="2018-03-07T04:09:26.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言学习笔记">
 <meta name="twitter:description" content="C语言笔记@(C language)  1.输入a和b两个整数,按先大后小的顺序输出a和b  方法一： 利用改变指针变量的值来实现（即改变指针的指向）123456789101112131415161718192021222324#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;/*输入a和b两个整数，按先大后小的顺序输出a和b; 方法一：利用改变指针">
@@ -409,7 +409,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 <p>(5) <strong>二维数组名</strong>（如a）是指向<strong>行</strong>的。因此a+1中的‘1’代表一行中全部元素所占的字节数（一行有4个整形元素，所以占16个字节）。<strong>一维数组名</strong>（如a[0],a[1]）是指向<strong>列元素</strong>的。因此a[0]+1中的‘1’代表一个元素所占的字节数（一个整形元素，所以占4个字节）。</p>
 <p>(6) 在<strong>指向行的指针</strong>前面加一个*号，就转换为<strong>指向列的指针</strong>。</p>
 <p>(7) 在<strong>指向列的指针</strong>前面加一个&amp;号，就转换为<strong>指向行的指针</strong>。</p>
-<p>(8) a[0]指向0行0列元素的指针，&amp;a[0]则指向二维数组的0行，与a等价。因为a[0]与<em>(a+0)等价，因此&amp;a[0]与&amp;\</em>a等价，也就是与a等价，它指向二维数组的0行。</p>
+<p>(8) a[0]指向0行0列元素的指针，&amp;a[0]则指向二维数组的0行，与a等价。因为a[0]与*(a+0)等价，因此&amp;a[0]与&amp;*a等价，也就是与a等价，它指向二维数组的0行。</p>
 <p>(9) &amp;a[i]和a[i]的值虽然一样，但它们的含义不一样。<strong>&amp;a[i]</strong>或<strong>a+i</strong>指向<strong>行</strong>，而<strong>a[i]</strong>或<strong>*(a+i)</strong>指向<strong>列</strong>。</p>
 <ul>
 <li><strong>6. 指向多维数组元素的指针变量</strong></li>
@@ -619,7 +619,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="http://yuan.technology/2018/02/02/C语言笔记/" data-id="cjegk8wjh0002wsv6k3deerh6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yuan.technology/2018/02/02/C语言笔记/" data-id="cjegke0010002nkv6uklclb22" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
