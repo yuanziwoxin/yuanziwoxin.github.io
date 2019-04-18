@@ -5,16 +5,16 @@
     
     <title>C语言学习笔记 | YuanTechnology</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="C语言笔记@(C语言) 1.输入a和b两个整数,按先大后小的顺序输出a和b方法一： 利用改变指针变量的值来实现（即改变指针的指向）123456789101112131415161718192021222324#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;/*输入a和b两个整数，按先大后小的顺序输出a和b; 方法一：利用改变指针变量的值来实现（即改">
+    <meta name="description" content="这是C语言学习笔记(一)，仅供参考！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言学习笔记">
 <meta property="og:url" content="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/index.html">
 <meta property="og:site_name" content="YuanTechnology">
-<meta property="og:description" content="C语言笔记@(C语言) 1.输入a和b两个整数,按先大后小的顺序输出a和b方法一： 利用改变指针变量的值来实现（即改变指针的指向）123456789101112131415161718192021222324#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;/*输入a和b两个整数，按先大后小的顺序输出a和b; 方法一：利用改变指针变量的值来实现（即改">
-<meta property="og:updated_time" content="2019-04-18T15:39:36.831Z">
+<meta property="og:description" content="这是C语言学习笔记(一)，仅供参考！">
+<meta property="og:updated_time" content="2019-04-18T15:46:44.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言学习笔记">
-<meta name="twitter:description" content="C语言笔记@(C语言) 1.输入a和b两个整数,按先大后小的顺序输出a和b方法一： 利用改变指针变量的值来实现（即改变指针的指向）123456789101112131415161718192021222324#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;/*输入a和b两个整数，按先大后小的顺序输出a和b; 方法一：利用改变指针变量的值来实现（即改">
+<meta name="twitter:description" content="这是C语言学习笔记(一)，仅供参考！">
     
 
     
@@ -80,7 +80,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="st-default-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="st-default-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <script type="text/javascript">
@@ -130,7 +130,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="st-default-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="st-default-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -150,16 +150,16 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
             <h2 id="name">yuanziwoxin</h2>
             <h3 id="title">Web Developer &amp; Designer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Ji&#39;An, China</span>
-            <a id="follow" target="_blank" href="https://github.com/yuanziwoxin/">SEGUIR</a>
+            <a id="follow" target="_blank" href="https://github.com/yuanziwoxin/">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 4
-                <span>Entradas</span>
+                <span>posts</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>Etiqueta</span>
+                <span>tag</span>
             </div>
         </div>
         
@@ -239,7 +239,8 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1 id="C语言笔记"><a href="#C语言笔记" class="headerlink" title="C语言笔记"></a>C语言笔记</h1><p>@(C语言)</p>
+            <p>这是C语言学习笔记(一)，仅供参考！<br><a id="more"></a></p>
+<h1 id="C语言笔记"><a href="#C语言笔记" class="headerlink" title="C语言笔记"></a>C语言笔记</h1><p>@(C语言)</p>
 <h2 id="1-输入a和b两个整数-按先大后小的顺序输出a和b"><a href="#1-输入a和b两个整数-按先大后小的顺序输出a和b" class="headerlink" title="1.输入a和b两个整数,按先大后小的顺序输出a和b"></a>1.输入a和b两个整数,按先大后小的顺序输出a和b</h2><p><strong>方法一：</strong> 利用改变指针变量的值来实现（即改变指针的指向）<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输入a和b两个整数，按先大后小的顺序输出a和b; </span></span><br><span class="line"><span class="comment">方法一：利用改变指针变量的值来实现（即改变指针的指向） </span></span><br><span class="line"><span class="comment">*/</span> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> *p1,*p2,a,b;</span><br><span class="line">	<span class="keyword">int</span> *temp;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Please enter two numbers:"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;a,&amp;b);<span class="comment">//注意在运行时，输入数据的格式要和scanf中的格式相同； </span></span><br><span class="line">	p1=&amp;a;</span><br><span class="line">	p2=&amp;b;</span><br><span class="line">	<span class="keyword">if</span>(a&lt;b)</span><br><span class="line">	&#123;</span><br><span class="line">		temp=p1;</span><br><span class="line">		p1=p2;</span><br><span class="line">		p2=temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Max=%d,Min=%d"</span>,*p1,*p2);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>方法二：</strong> 利用交换指针变量指向的变量值（即交换a和b的值）<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">方法二：利用交换指针变量指向的变量值（即交换a和b的值） </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> *p1,*p2,a,b;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Please enter two numbers:"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d,%d"</span>,&amp;a,&amp;b);</span><br><span class="line">	p1=&amp;a;</span><br><span class="line">	p2=&amp;b;</span><br><span class="line">	<span class="keyword">if</span>(a&gt;b)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">// *p1和*p2实际就是表示指针变量p1和 p2指向的变量（即a 和 b） </span></span><br><span class="line">		temp=*p1;</span><br><span class="line">		*p1=*p2;</span><br><span class="line">		*p2=temp;	</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,a,b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>方法三：</strong> 使用函数处理，将指向两个整型变量的指针变量作为实参传递给swap函数的形参指针变量，在函数中通过指针变量实现交换两个变量的值。</p>
@@ -788,7 +789,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/" data-id="cjumtbzbz0004zov6tl3h8j1l" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/" data-id="cjumtk1lf000434v64u7shks9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -856,7 +857,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
             
     
-        <a href="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/">Comentarios</a>
+        <a href="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/">Comments</a>
     
 
         </footer>
@@ -867,7 +868,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     
     
         <a href="/2018/02/01/Python笔记（一）/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Más viejo</strong>
+            <strong class="article-nav-caption">Older</strong>
             <div class="article-nav-title">Python笔记（一）</div>
         </a>
     
@@ -894,7 +895,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Recientes</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -983,7 +984,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Archivos</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">2</span></li></ul>
         </div>
@@ -996,7 +997,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">Links</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
