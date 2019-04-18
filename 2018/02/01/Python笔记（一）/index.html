@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yuanziwoxin.github.io">
-  <title>YuanTechnology</title>
+  <title>Python笔记（一） | YuanTechnology</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title：Python笔记（一）Python笔记（一）@(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示">
+  <meta name="description" content="这是Python笔记（一）的摘要">
 <meta property="og:type" content="article">
-<meta property="og:title" content="YuanTechnology">
+<meta property="og:title" content="Python笔记（一）">
 <meta property="og:url" content="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/index.html">
 <meta property="og:site_name" content="YuanTechnology">
-<meta property="og:description" content="title：Python笔记（一）Python笔记（一）@(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示">
+<meta property="og:description" content="这是Python笔记（一）的摘要">
 <meta property="og:image" content="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/2015514101804370.jpg">
 <meta property="og:image" content="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/TIM截图20180109160709.png">
 <meta property="og:image" content="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/TIM图片20180109162322.png">
@@ -58,10 +58,10 @@
 <meta property="og:image" content="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/TIM截图20180118210745.png">
 <meta property="og:image" content="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/TIM截图20180118211358.png">
 <meta property="og:image" content="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/TIM截图20180118212122.png">
-<meta property="og:updated_time" content="2018-03-07T04:14:07.556Z">
+<meta property="og:updated_time" content="2019-04-18T14:28:59.744Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YuanTechnology">
-<meta name="twitter:description" content="title：Python笔记（一）Python笔记（一）@(Python)  1.元组与列表的区别及元组的一些小细节 12345678910type((1)) 	 	 #这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号type((&apos;hello&apos;))  #这里显示为str类型，而不是tuple类型type([&quot;hello&quot;,1,3,False]) #显示">
+<meta name="twitter:title" content="Python笔记（一）">
+<meta name="twitter:description" content="这是Python笔记（一）的摘要">
 <meta name="twitter:image" content="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/2015514101804370.jpg">
   
     <link rel="alternative" href="/atom.xml" title="YuanTechnology" type="application/atom+xml">
@@ -207,10 +207,25 @@
             <article id="post-Python笔记（一）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python笔记（一）
+    </h1>
+  
+
+        
+        <a href="/2018/02/01/Python笔记（一）/" class="archive-article-date">
+  	<time datetime="2018-01-31T16:40:18.694Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-01</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title：Python笔记（一）"><a href="#title：Python笔记（一）" class="headerlink" title="title：Python笔记（一）"></a>title：Python笔记（一）</h2><h1 id="Python笔记（一）"><a href="#Python笔记（一）" class="headerlink" title="Python笔记（一）"></a>Python笔记（一）</h1><p>@(Python)</p>
+        <p>这是Python笔记（一）的摘要<br><a id="more"></a></p>
+<h1 id="Python笔记（一）"><a href="#Python笔记（一）" class="headerlink" title="Python笔记（一）"></a>Python笔记（一）</h1><p>@(Python)</p>
 <ul>
 <li><p><strong>1.元组与列表的区别及元组的一些小细节</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">type((<span class="number">1</span>)) 	 	 <span class="comment">#这里显示为int类型，而不是tuple类型，这里把里面的“（）”即括号当作是数学运算中的括号</span></span><br><span class="line">type((<span class="string">'hello'</span>))  <span class="comment">#这里显示为str类型，而不是tuple类型</span></span><br><span class="line">type([<span class="string">"hello"</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="keyword">False</span>]) <span class="comment">#显示为list类型</span></span><br><span class="line">type((<span class="keyword">False</span>,<span class="string">"hello"</span>,<span class="number">1</span>,<span class="number">4</span>)) <span class="comment">#显示为tuple类型</span></span><br><span class="line"><span class="comment">#注意：方括号为list类型，而圆括号为tuple类型</span></span><br><span class="line">type((<span class="number">1</span>,))       <span class="comment">#表示只有一个元素的元组</span></span><br><span class="line">type((<span class="string">"hello"</span>,)) <span class="comment">#表示只有一个元素的元组</span></span><br><span class="line">type(())		 <span class="comment">#这里显示为tuple类型</span></span><br><span class="line">type([<span class="number">1</span>])		 <span class="comment">#这里显示为list类型</span></span><br><span class="line"><span class="comment"># str,list,tuple都为序列，其许多相应操作都类似</span></span><br></pre></td></tr></table></figure>
