@@ -6,16 +6,17 @@
     <title>Solidity学习笔记 | YuanTechnology</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="本人学习过程中整理的Solidity笔记，仅供参考！">
+<meta name="keywords" content="Ethereum">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Solidity学习笔记">
 <meta property="og:url" content="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/index.html">
 <meta property="og:site_name" content="YuanTechnology">
 <meta property="og:description" content="本人学习过程中整理的Solidity笔记，仅供参考！">
 <meta property="og:image" content="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/Solidity学习笔记.png">
-<meta property="og:image" content="en-resource://database/8708:1">
-<meta property="og:image" content="en-resource://database/8706:1">
-<meta property="og:image" content="en-resource://database/8704:1">
-<meta property="og:updated_time" content="2019-04-19T01:51:03.713Z">
+<meta property="og:image" content="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/6c0db3c9538ce7d77d1515eec56b5731.png">
+<meta property="og:image" content="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/ecd072b990c8c19ea00559dd3976b686.png">
+<meta property="og:image" content="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/f356c1f6f0404c72d5d1658e5a27baa9.png">
+<meta property="og:updated_time" content="2019-04-19T02:16:03.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Solidity学习笔记">
 <meta name="twitter:description" content="本人学习过程中整理的Solidity笔记，仅供参考！">
@@ -163,8 +164,8 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                0
-                <span>tag</span>
+                4
+                <span>tags</span>
             </div>
         </div>
         
@@ -236,6 +237,11 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
                         
                         
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Ethereum/">Ethereum</a>
+    </div>
+
                     </div>
                 
             </header>
@@ -421,12 +427,12 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 <li>（1）执行函数包含参数：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity &gt;=0.4.20 &lt;=0.7.0;</span><br><span class="line"></span><br><span class="line">contract MsgContract&#123;</span><br><span class="line">    // 获取相关的系统信息</span><br><span class="line">    function getMsgInfo(uint x) public payable returns(bytes memory data,uint gas,address sender,bytes4 sig,uint value)&#123;</span><br><span class="line">        data = msg.data; //获取当前执行函数的调用数据（包含函数标识，即sha3散列值的前8位，若执行函数有参数，则还包含参数值）</span><br><span class="line">        // gas = msg.gas; // msg.gas已经被gasleft()函数取代</span><br><span class="line">        gas = gasleft(); // 获取剩余的gas</span><br><span class="line">        sender = msg.sender; // 获取当前执行函数的调用地址</span><br><span class="line">        sig = msg.sig; // 获取当前执行函数的标识（sha3散列值的前8位）</span><br><span class="line">        value = msg.value; // 当前被发送的wei的数量（使用该属性的函数要使用payable关键字修饰）</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><img src="en-resource://database/8708:1" alt="6c0db3c9538ce7d77d1515eec56b5731.png"></p>
-<p><strong>结果：</strong><br><img src="en-resource://database/8706:1" alt="ecd072b990c8c19ea00559dd3976b686.png"></p>
+<img src="/2019/04/19/Solidity学习笔记/6c0db3c9538ce7d77d1515eec56b5731.png" title="The steps are as follows">
+<p><strong>结果：</strong><br><img src="/2019/04/19/Solidity学习笔记/ecd072b990c8c19ea00559dd3976b686.png" title="The result_1 are as follows"></p>
 <ul>
 <li>（2）执行函数不包含参数：</li>
 </ul>
-<p>把上述合约函数中的getMsgInfo(uint x)修改为getMsgInfo( ), 即去掉函数的参数。<br><strong>结果：</strong><br><img src="en-resource://database/8704:1" alt="f356c1f6f0404c72d5d1658e5a27baa9.png"></p>
+<p>把上述合约函数中的getMsgInfo(uint x)修改为getMsgInfo( ), 即去掉函数的参数。<br><strong>结果：</strong><br><img src="/2019/04/19/Solidity学习笔记/f356c1f6f0404c72d5d1658e5a27baa9.png" title="The result_2 are as follows"></p>
 <blockquote>
 <ul>
 <li>msg.data表示当前执行函数的调用数据，包含函数标识（即sha3散列值的前8位）。如果<strong>执行函数包含参数</strong>，则<strong>其还包含参数值</strong>。</li>
@@ -547,7 +553,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/" data-id="cjunf2k19000588v6qp7nn0fd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/" data-id="cjung1y8b0006hgv66st0jzp8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -691,7 +697,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2018/02/02/C语言笔记/" class="title">C语言学习笔记</a></p>
-                            <p class="item-date"><time datetime="2018-02-02T03:04:13.745Z" itemprop="datePublished">2018-02-02</time></p>
+                            <p class="item-date"><time datetime="2018-02-02T02:30:02.000Z" itemprop="datePublished">2018-02-02</time></p>
                         </div>
                     </li>
                 
@@ -710,14 +716,14 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2018/02/01/Python笔记（一）/" class="title">Python笔记（一）</a></p>
-                            <p class="item-date"><time datetime="2018-01-31T16:40:18.694Z" itemprop="datePublished">2018-02-01</time></p>
+                            <p class="item-date"><time datetime="2018-02-01T10:03:02.000Z" itemprop="datePublished">2018-02-01</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/01/30/hello-world/" class="thumbnail">
+                            <a href="/2018/01/30/Hexo Quick Start/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -728,8 +734,8 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/01/30/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2018-01-30T09:16:02.053Z" itemprop="datePublished">2018-01-30</time></p>
+                            <p class="item-title"><a href="/2018/01/30/Hexo Quick Start/" class="title">Hexo Quick Start</a></p>
+                            <p class="item-date"><time datetime="2018-01-30T03:05:09.000Z" itemprop="datePublished">2018-01-30</time></p>
                         </div>
                     </li>
                 
@@ -750,8 +756,22 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
     
         
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ethereum/">Ethereum</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
     
         
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/Ethereum/" style="font-size: 10px;">Ethereum</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a>
+        </div>
+    </div>
+
     
         
     <div class="widget-wrap widget-list">

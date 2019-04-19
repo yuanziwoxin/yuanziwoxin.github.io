@@ -5,16 +5,16 @@
     
     <title>C语言学习笔记 | YuanTechnology</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="这是C语言学习笔记(一)，仅供参考！">
+    <meta name="keywords" content="C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言学习笔记">
 <meta property="og:url" content="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/index.html">
 <meta property="og:site_name" content="YuanTechnology">
-<meta property="og:description" content="这是C语言学习笔记(一)，仅供参考！">
-<meta property="og:updated_time" content="2019-04-19T01:49:58.626Z">
+<meta property="og:image" content="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/C语言笔记.png">
+<meta property="og:updated_time" content="2019-04-19T02:08:47.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言学习笔记">
-<meta name="twitter:description" content="这是C语言学习笔记(一)，仅供参考！">
+<meta name="twitter:image" content="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/C语言笔记.png">
     
 
     
@@ -158,8 +158,8 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                0
-                <span>tag</span>
+                4
+                <span>tags</span>
             </div>
         </div>
         
@@ -224,13 +224,18 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2018/02/02/C语言笔记/">
-            <time datetime="2018-02-02T03:04:13.745Z" itemprop="datePublished">2018-02-02</time>
+            <time datetime="2018-02-02T02:30:02.000Z" itemprop="datePublished">2018-02-02</time>
         </a>
     </div>
 
 
                         
                         
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/C/">C</a>
+    </div>
+
                     </div>
                 
             </header>
@@ -239,7 +244,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>这是C语言学习笔记(一)，仅供参考！</p>
+            <img src="/2018/02/02/C语言笔记/C语言笔记.png" title="Learn C Language">
 <a id="more"></a>
 <h2 id="1-输入a和b两个整数-按先大后小的顺序输出a和b"><a href="#1-输入a和b两个整数-按先大后小的顺序输出a和b" class="headerlink" title="1.输入a和b两个整数,按先大后小的顺序输出a和b"></a>1.输入a和b两个整数,按先大后小的顺序输出a和b</h2><p><strong>方法一：</strong> 利用改变指针变量的值来实现（即改变指针的指向）<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输入a和b两个整数，按先大后小的顺序输出a和b; </span></span><br><span class="line"><span class="comment">方法一：利用改变指针变量的值来实现（即改变指针的指向） </span></span><br><span class="line"><span class="comment">*/</span> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> *p1,*p2,a,b;</span><br><span class="line">	<span class="keyword">int</span> *temp;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Please enter two numbers:"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;a,&amp;b);<span class="comment">//注意在运行时，输入数据的格式要和scanf中的格式相同； </span></span><br><span class="line">	p1=&amp;a;</span><br><span class="line">	p2=&amp;b;</span><br><span class="line">	<span class="keyword">if</span>(a&lt;b)</span><br><span class="line">	&#123;</span><br><span class="line">		temp=p1;</span><br><span class="line">		p1=p2;</span><br><span class="line">		p2=temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Max=%d,Min=%d"</span>,*p1,*p2);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>方法二：</strong> 利用交换指针变量指向的变量值（即交换a和b的值）<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">方法二：利用交换指针变量指向的变量值（即交换a和b的值） </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> *p1,*p2,a,b;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Please enter two numbers:"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d,%d"</span>,&amp;a,&amp;b);</span><br><span class="line">	p1=&amp;a;</span><br><span class="line">	p2=&amp;b;</span><br><span class="line">	<span class="keyword">if</span>(a&gt;b)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">// *p1和*p2实际就是表示指针变量p1和 p2指向的变量（即a 和 b） </span></span><br><span class="line">		temp=*p1;</span><br><span class="line">		*p1=*p2;</span><br><span class="line">		*p2=temp;	</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,a,b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -789,7 +794,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/" data-id="cjunf2k14000388v6ayj9pmjz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/" data-id="cjung1y880005hgv6r2enrxph" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -942,7 +947,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2018/02/02/C语言笔记/" class="title">C语言学习笔记</a></p>
-                            <p class="item-date"><time datetime="2018-02-02T03:04:13.745Z" itemprop="datePublished">2018-02-02</time></p>
+                            <p class="item-date"><time datetime="2018-02-02T02:30:02.000Z" itemprop="datePublished">2018-02-02</time></p>
                         </div>
                     </li>
                 
@@ -961,14 +966,14 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2018/02/01/Python笔记（一）/" class="title">Python笔记（一）</a></p>
-                            <p class="item-date"><time datetime="2018-01-31T16:40:18.694Z" itemprop="datePublished">2018-02-01</time></p>
+                            <p class="item-date"><time datetime="2018-02-01T10:03:02.000Z" itemprop="datePublished">2018-02-01</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/01/30/hello-world/" class="thumbnail">
+                            <a href="/2018/01/30/Hexo Quick Start/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -979,8 +984,8 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/01/30/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2018-01-30T09:16:02.053Z" itemprop="datePublished">2018-01-30</time></p>
+                            <p class="item-title"><a href="/2018/01/30/Hexo Quick Start/" class="title">Hexo Quick Start</a></p>
+                            <p class="item-date"><time datetime="2018-01-30T03:05:09.000Z" itemprop="datePublished">2018-01-30</time></p>
                         </div>
                     </li>
                 
@@ -1001,8 +1006,22 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
     
         
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ethereum/">Ethereum</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
     
         
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/Ethereum/" style="font-size: 10px;">Ethereum</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a>
+        </div>
+    </div>
+
     
         
     <div class="widget-wrap widget-list">
