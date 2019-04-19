@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yuanziwoxin.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-04-19T14:38:08.785Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuanziwoxin.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-04-19T14:38:05.311Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuanziwoxin.github.io/about/index.html</loc>
+    
+    <lastmod>2019-04-19T14:34:45.264Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yuanziwoxin.github.io/2018/01/30/Hexo%20Quick%20Start/</loc>
     
     <lastmod>2019-04-19T05:30:59.025Z</lastmod>
