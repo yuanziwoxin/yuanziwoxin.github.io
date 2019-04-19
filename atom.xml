@@ -53,24 +53,6 @@
   </entry>
   
   <entry>
-    <title>爱KG爱编程</title>
-    <link href="https://yuanziwoxin.github.io/2018/01/30/%E7%88%B1KG%E7%88%B1%E7%BC%96%E7%A8%8B/"/>
-    <id>https://yuanziwoxin.github.io/2018/01/30/爱KG爱编程/</id>
-    <published>2018-01-30T15:12:59.000Z</published>
-    <updated>2019-04-18T15:47:35.141Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是这篇文章的摘要，仅供测试！<br><a id="more"></a></p><h2 id="Anything-is-possible！"><a href="#Anything-is-possible！" class="headerlink" title="Anything is possible！"></a>Anything is possible！</h2><h3 id="Learn-C-language"><a href="#Learn-C-language" class="headerlink" title="Learn C language"></a>Learn C language</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Hello,world!"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是这篇文章的摘要，仅供测试！&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="https://yuanziwoxin.github.io/2018/01/30/hello-world/"/>
     <id>https://yuanziwoxin.github.io/2018/01/30/hello-world/</id>
