@@ -3,14 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>YuanTechnology</title>
+    <title>Solidity学习笔记 | YuanTechnology</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="YuanTechnology">
-<meta property="og:url" content="https://yuanziwoxin.github.io/index.html">
+    <meta name="description" content="本人学习过程中整理的Solidity笔记，仅供参考！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Solidity学习笔记">
+<meta property="og:url" content="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记-1/index.html">
 <meta property="og:site_name" content="YuanTechnology">
+<meta property="og:description" content="本人学习过程中整理的Solidity笔记，仅供参考！">
+<meta property="og:image" content="en-resource://database/8708:1">
+<meta property="og:image" content="en-resource://database/8706:1">
+<meta property="og:image" content="en-resource://database/8704:1">
+<meta property="og:updated_time" content="2019-04-19T01:45:48.340Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YuanTechnology">
+<meta name="twitter:title" content="Solidity学习笔记">
+<meta name="twitter:description" content="本人学习过程中整理的Solidity笔记，仅供参考！">
+<meta name="twitter:image" content="en-resource://database/8708:1">
     
 
     
@@ -202,16 +210,15 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 </aside>
 
             
-            <section id="main">
-    <article id="post-Solidity学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-Solidity学习笔记-1" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
             <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/04/19/Solidity学习笔记/">Solidity学习笔记</a>
+        <h1 class="article-title" itemprop="name">
+            Solidity学习笔记
         </h1>
     
 
@@ -220,7 +227,7 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2019/04/19/Solidity学习笔记/">
+        <a href="/2019/04/19/Solidity学习笔记-1/">
             <time datetime="2019-04-19T01:35:02.000Z" itemprop="datePublished">2019-04-19</time>
         </a>
     </div>
@@ -236,7 +243,8 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>[TOC]</p>
+            <p>本人学习过程中整理的Solidity笔记，仅供参考！<br><br><a id="more"></a></p>
+<p>[TOC]</p>
 <h1 id="一、基本介绍"><a href="#一、基本介绍" class="headerlink" title="一、基本介绍"></a>一、基本介绍</h1><p>Solidity是一门静态类型语言，支持继承、库和复杂的用户自定义类型等特性。</p>
 <h1 id="二、基础语法"><a href="#二、基础语法" class="headerlink" title="二、基础语法"></a>二、基础语法</h1><h2 id="1-地址（address）"><a href="#1-地址（address）" class="headerlink" title="1. 地址（address）"></a>1. 地址（address）</h2><ul>
 <li>以太坊中的地址为160位，即20个字节大小，所以可以用一个uint160表示。</li>
@@ -538,129 +546,6 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
 
 </div>
 
-    <a data-url="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/" data-id="cjuneyqnu0004l0v6psqu25rs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Solidity学习笔记-1" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2019/04/19/Solidity学习笔记-1/">Solidity学习笔记</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/04/19/Solidity学习笔记-1/">
-            <time datetime="2019-04-19T01:35:02.000Z" itemprop="datePublished">2019-04-19</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>本人学习过程中整理的Solidity笔记，仅供参考！<br><br></p>
-            <p class="article-more-link">
-                <a href="/2019/04/19/Solidity学习笔记-1/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
     <a data-url="https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记-1/" data-id="cjuneyqnv0005l0v64i0qjq45" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
@@ -735,377 +620,39 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
         </footer>
     </div>
     
-</article>
-
-
-
-    <article id="post-C语言笔记" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+<nav id="article-nav">
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/02/02/C语言笔记/">C语言学习笔记</a>
-        </h1>
-    
-
+        <a href="/2019/04/19/Solidity学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
                 
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/02/C语言笔记/">
-            <time datetime="2018-02-02T03:04:13.745Z" itemprop="datePublished">2018-02-02</time>
+                    Solidity学习笔记
+                
+            </div>
         </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>这是C语言学习笔记(一)，仅供参考！<br></p>
-            <p class="article-more-link">
-                <a href="/2018/02/02/C语言笔记/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/" data-id="cjuneyqnr0003l0v6cukh5lfh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
-        <a href="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://yuanziwoxin.github.io/2018/02/02/C语言笔记/">Comments</a>
     
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Python笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/02/01/Python笔记（一）/">Python笔记（一）</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/01/Python笔记（一）/">
-            <time datetime="2018-01-31T16:40:18.694Z" itemprop="datePublished">2018-02-01</time>
+        <a href="/2018/02/02/C语言笔记/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">C语言学习笔记</div>
         </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>这是python学习笔记(一)，仅供参考！<br></p>
-            <p class="article-more-link">
-                <a href="/2018/02/01/Python笔记（一）/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/" data-id="cjuneyqo70006l0v6ujr4676e" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
-        <a href="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://yuanziwoxin.github.io/2018/02/01/Python笔记（一）/">Comments</a>
-    
+</nav>
 
-        </footer>
-    </div>
+
     
 </article>
 
 
-
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/01/30/hello-world/">Hello World</a>
-        </h1>
     
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/01/30/hello-world/">
-            <time datetime="2018-01-30T09:16:02.053Z" itemprop="datePublished">2018-01-30</time>
-        </a>
+        <section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br></p>
-            <p class="article-more-link">
-                <a href="/2018/01/30/hello-world/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://yuanziwoxin.github.io/2018/01/30/hello-world/" data-id="cjuneyqjf0000l0v6puepxwuz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
+</section>
     
-        <a href="https://yuanziwoxin.github.io/2018/01/30/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://yuanziwoxin.github.io/2018/01/30/hello-world/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
 
 </section>
             
@@ -1267,11 +814,13 @@ _st('install','g6shCyTigBeFsHDSSR-n','2.0.0');
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = '';
+            this.page.url = 'https://yuanziwoxin.github.io/2019/04/19/Solidity学习笔记-1/';
+        
+        this.page.identifier = 'Solidity学习笔记-1';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'yuan-technology' + '.disqus.com/count.js';
+        s.src = '//' + 'yuan-technology' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
